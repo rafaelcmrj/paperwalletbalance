@@ -1,0 +1,1 @@
+var paperWalletBalance = angular.module('PaperWalletBalance', ['ionic', 'ngCordova']);

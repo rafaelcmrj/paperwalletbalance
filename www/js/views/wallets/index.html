@@ -1,0 +1,21 @@
+<ion-view ng-controller="WalletsCtrl">
+	<ion-nav-title>Your Wallets</ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-icon icon ion-android-add" ng-click="scan()"></button>
+		<button class="button button-icon icon ion-android-refresh" ng-click="refresh()"></button>
+	</ion-nav-buttons>
+
+	<ion-content padding="true">
+
+		<ion-list ng-repeat="wallet in wallets">
+		    <ion-item class="item-thumbnail-left" show-delete="true">
+		      <img src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&chld=L|0&chl={{wallet.address}}">
+		      <h2>{{wallet.address}}</h2>
+		      <p>US$ 192.19</p>
+		      <p>R$ 594,87</p>
+		      <p><small>Updated 5 minutes ago</small></p>
+		    </ion-item>
+		</ion-list>
+
+	</ion-content>
+</ion-view>
